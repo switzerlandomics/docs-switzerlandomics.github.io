@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Style guide
+title: Style page guide
 nav_order: 5
 ---
 
