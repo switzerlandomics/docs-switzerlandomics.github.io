@@ -13,7 +13,7 @@ Last update: 20241220
 We prepare two datasets:
 
 - (a) 1KG reference population: input `${THOUSAND_GENOMES}/phase3.chr"${INDEX}".GRCh38.GT.crossmap.vcf.gz`
-- (b) SwissPedHealth: input  `${PRE_ANNOTATION_DIR}/chr${INDEX}_bcftools_gatk_norm.bcf`
+- (b) Cohort: input  `${PRE_ANNOTATION_DIR}/chr${INDEX}_bcftools_gatk_norm.bcf`
 
 * We prepare with bcftools and convert to bcf.
 * We then convert to PLINK format.
