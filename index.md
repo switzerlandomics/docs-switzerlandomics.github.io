@@ -4,15 +4,14 @@ title: Home
 nav_order: 1
 ---
 
-<h1
-style="display:center;">
-    <img
-    style="float: left; padding-top: 1px"
-    src="{{ "assets/images/logos/SwissPedHealth_Pipeline_Devs.png" | relative_url }}"
+<h1 style="display: flex; align-items: center; gap: 10px;">
+  <img
+    src="{{ 'assets/images/logos/logo_v2_hires.png' | relative_url }}"
     alt="Pipe dev logo image"
     width="70"
-    />
-Dev docs
+    style="padding-top: 1px;"
+  />
+  Dev docs
 </h1>
 
 ---
