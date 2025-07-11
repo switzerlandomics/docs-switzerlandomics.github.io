@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/* custom.scss */
+/* Backgrounds and text */
+/* Links and accents */
+/* Navigation */
+/* Borders and dividers */
+/* Code blocks */
+/* Tables */
+/* Search highlight */
+/* Callouts or notes */
+/* Miscellaneous */
 .highlight,
 pre.highlight {
   background: #f9f9f9;
@@ -640,7 +650,7 @@ p {
 }
 
 a {
-  color: #7253ed;
+  color: #D00000;
   text-decoration: none;
 }
 
@@ -650,7 +660,7 @@ a:not([class]) {
   text-underline-offset: 2px;
 }
 a:not([class]):hover {
-  text-decoration-color: rgba(114, 83, 237, 0.45);
+  text-decoration-color: rgba(208, 0, 0, 0.45);
 }
 
 code {
@@ -690,14 +700,14 @@ blockquote {
 }
 
 .nav-columns {
-  background-color: #f5f6fa; /* Temporary background color to see the grid area */
+  background-color: #F4F4F3; /* Temporary background color to see the grid area */
 }
 
 .side-bar {
   z-index: 0;
   display: flex;
   flex-wrap: wrap;
-  background-color: #f5f6fa;
+  background-color: #F4F4F3;
 }
 @media (min-width: 50rem) {
   .side-bar {
@@ -754,7 +764,7 @@ blockquote {
 .main-header {
   z-index: 0;
   display: none;
-  background-color: #f5f6fa;
+  background-color: #F4F4F3;
 }
 @media (min-width: 50rem) {
   .main-header {
@@ -860,11 +870,11 @@ blockquote {
   }
 }
 .site-title:hover {
-  background-image: linear-gradient(-90deg, #ebedf5 0%, rgba(235, 237, 245, 0.8) 80%, rgba(235, 237, 245, 0) 100%);
+  background-image: linear-gradient(-90deg, #ededeb 0%, rgba(237, 237, 235, 0.8) 80%, rgba(237, 237, 235, 0) 100%);
 }
 
 .site-button:hover {
-  background-image: linear-gradient(-90deg, #ebedf5 0%, rgba(235, 237, 245, 0.8) 100%);
+  background-image: linear-gradient(-90deg, #ededeb 0%, rgba(237, 237, 235, 0.8) 100%);
 }
 
 body {
@@ -911,7 +921,7 @@ body {
 .icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: #7253ed;
+  color: #D00000;
 }
 
 .main-content {
@@ -1059,7 +1069,7 @@ body {
   display: inline-block;
   width: 100%;
   height: 100%;
-  color: #7253ed;
+  color: #D00000;
   visibility: hidden;
 }
 .main-content .anchor-heading:hover svg,
@@ -1199,7 +1209,7 @@ body {
   text-decoration: none;
 }
 .nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
-  background-image: linear-gradient(-90deg, #ebedf5 0%, rgba(235, 237, 245, 0.8) 80%, rgba(235, 237, 245, 0) 100%);
+  background-image: linear-gradient(-90deg, #ededeb 0%, rgba(237, 237, 235, 0.8) 80%, rgba(237, 237, 235, 0) 100%);
 }
 .nav-list .nav-list-item .nav-list-expander {
   position: absolute;
@@ -1207,7 +1217,7 @@ body {
   width: 3rem;
   height: 3rem;
   padding: 0.75rem;
-  color: #7253ed;
+  color: #D00000;
 }
 @media (min-width: 50rem) {
   .nav-list .nav-list-item .nav-list-expander {
@@ -1217,7 +1227,7 @@ body {
   }
 }
 .nav-list .nav-list-item .nav-list-expander:hover {
-  background-image: linear-gradient(-90deg, #ebedf5 0%, rgba(235, 237, 245, 0.8) 100%);
+  background-image: linear-gradient(-90deg, #ededeb 0%, rgba(237, 237, 235, 0.8) 100%);
 }
 .nav-list .nav-list-item .nav-list-expander svg {
   transform: rotate(90deg);
@@ -1274,10 +1284,10 @@ body {
   padding: 0;
 }
 .nav-list.nav-category-list > .nav-list-item > .nav-list > .nav-list-item > .nav-list-link {
-  color: #7253ed;
+  color: #D00000;
 }
 .nav-list.nav-category-list > .nav-list-item > .nav-list > .nav-list-item > .nav-list-expander {
-  color: #7253ed;
+  color: #D00000;
 }
 
 .aux-nav {
@@ -1493,7 +1503,7 @@ h6,
   font-size: inherit;
   font-weight: 500;
   line-height: 1.5;
-  color: #7253ed;
+  color: #D00000;
   text-decoration: none;
   vertical-align: baseline;
   cursor: pointer;
@@ -1512,7 +1522,7 @@ h6,
   box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.25);
 }
 .btn:hover, .btn.zeroclipboard-is-hover {
-  color: #6a4aec;
+  color: #c60000;
 }
 .btn:hover, .btn:active, .btn.zeroclipboard-is-hover, .btn.zeroclipboard-is-active {
   text-decoration: none;
@@ -1535,12 +1545,12 @@ h6,
 }
 
 .btn-outline {
-  color: #7253ed;
+  color: #D00000;
   background: transparent;
   box-shadow: inset 0 0 0 2px #e6e1e8;
 }
 .btn-outline:hover, .btn-outline:active, .btn-outline.zeroclipboard-is-hover, .btn-outline.zeroclipboard-is-active {
-  color: #6341eb;
+  color: #bc0000;
   text-decoration: none;
   background-color: transparent;
   box-shadow: inset 0 0 0 3px #e6e1e8;
@@ -1556,22 +1566,22 @@ h6,
 
 .btn-primary {
   color: #fff;
-  background-color: #5739ce;
-  background-image: linear-gradient(#6f55d5, #5739ce);
+  background-color: #c60000;
+  background-image: linear-gradient(#ea0000, #c60000);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 .btn-primary:hover, .btn-primary.zeroclipboard-is-hover {
   color: #fff;
-  background-color: #5132cb;
-  background-image: linear-gradient(#6549d2, #5132cb);
+  background-color: #bc0000;
+  background-image: linear-gradient(#da0000, #bc0000);
 }
 .btn-primary:active, .btn-primary.selected, .btn-primary.zeroclipboard-is-active {
-  background-color: #4f31c6;
+  background-color: #b70000;
   background-image: none;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .btn-primary.selected:hover {
-  background-color: #472cb2;
+  background-color: #9d0000;
 }
 
 .btn-purple {
@@ -1699,7 +1709,7 @@ h6,
   outline: 0;
 }
 .search-input:focus + .search-label .search-icon {
-  color: #7253ed;
+  color: #D00000;
 }
 
 .search-label {
@@ -1773,7 +1783,7 @@ h6,
   padding: 0.25rem 0.75rem;
 }
 .search-result:hover, .search-result.active {
-  background-color: #ebedf5;
+  background-color: #ededeb;
 }
 
 .search-result-title {
@@ -1818,7 +1828,7 @@ h6,
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
-  color: #7253ed;
+  color: #D00000;
   flex-shrink: 0;
 }
 .search-result-doc .search-result-doc-title {
@@ -1898,7 +1908,7 @@ h6,
   width: 3.5rem;
   height: 3.5rem;
   background-color: #fff;
-  border: 1px solid rgba(114, 83, 237, 0.3);
+  border: 1px solid rgba(208, 0, 0, 0.3);
   border-radius: 1.75rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   align-items: center;
@@ -7264,7 +7274,7 @@ a.skip-to-main {
 
 a.skip-to-main:focus,
 a.skip-to-main:active {
-  color: #7253ed;
+  color: #D00000;
   background-color: #fff;
   left: auto;
   top: auto;
@@ -7274,7 +7284,7 @@ a.skip-to-main:active {
   margin: 10px 35%;
   padding: 5px;
   border-radius: 15px;
-  border: 4px solid #5e41d0;
+  border: 4px solid #D00000;
   text-align: center;
   font-size: 1.2em;
   z-index: 999;
