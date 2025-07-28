@@ -1,13 +1,13 @@
 ---
 layout: default
-title: storage
+title: Storage estimates
 nav_order: 5
 ---
 
 # Storage
 Last update: 20250120
 
-## Summary
+## Summary estimates
 
 {: .note }
 
@@ -17,7 +17,7 @@ For a full omic analysis we estimate that 250GB of space is used per subject.
 
 
 The number of subjects changes depending on the data type.
-We have approximately 180 subjects currently.
+During writing, we have 180 subjects in an example project.
 
 ## Data usage
 
