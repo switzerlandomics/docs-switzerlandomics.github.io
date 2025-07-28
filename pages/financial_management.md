@@ -6,14 +6,13 @@ nav_order: 5
 ---
 
 Last update: 20250727
-# Storage architecture plan
+
+# Financial management system overview
 
 * TOC
 {:toc}
 
 ---
-
-# Financial management system overview
 
 We maintain full transparency and auditability of our financials by storing structured raw data and programmatically generating our accounting records. Our financial system is built in R using a modern, developer-friendly workflow grounded in double-entry principles, asset classification, and reproducible reporting. This approach ensures clarity, precision, and trust in how company funds are spent and assets are tracked.
 
