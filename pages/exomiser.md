@@ -65,6 +65,8 @@ $$
 \end{cases}
 $$
 
+> The constants $$1.13533$$ and $$0.13533$$ in the frequency score equation are fixed values calibrated once by the Exomiser authors using their reference dataset. They define the shape of the exponential decay from rare to common variants and are not recalculated for user runs. The only run-specific input is $$f$$, the maximum MAF across the frequency datasets selected for that analysis, which is plugged into the fixed equation to yield the frequency score.
+
 **Pathogenicity score** (**reported**):  
 Let $$\text{normPred}_k \in [0,1]$$ be the normalised score from predictor $$k$$ (PolyPhen-2, SIFT, MutationTaster, CADD, REVEL, M-CAP, MPC, MVP, PrimateAI, etc.).  
 High-impact consequences (frameshift, nonsense, canonical splice acceptor/donor, start-loss, stop-loss) are fixed at $$1.0$$, splice-region at $$0.8$$.  
@@ -86,6 +88,8 @@ If $$V_1, V_2$$ are the two alleles:
 $$
 V_{\text{AR}} = \frac{V_1 + V_2}{2}
 $$
+
+> The frequency score equation is applied identically to homozygous and heterozygous variants. In autosomal recessive mode, Exomiser averages the two variant scores for a compound heterozygote. If trio data are available, it uses inheritance patterns to confirm the variants are in trans; otherwise, it assumes potential compound heterozygosity when a gene contains two or more rare, surviving variants, which can produce false positives in unphased singleton data.
 
 ---
 
@@ -128,7 +132,7 @@ $$
 
 ### 2.6 Final Exomiser score
 
-**Logistic combination**: form **inferred**, training setup **reported**.  
+**Logistic combination**: form **inferred**, training setup **reported**.
 Model trained once on reference data; coefficients $$\beta_0,\beta_1,\beta_2$$ are fixed per Exomiser release.
 
 $$
@@ -136,6 +140,18 @@ S_g = \sigma\!\big( \beta_0 + \beta_1 V_g^\ast + \beta_2 P'_g \big)
 \qquad\text{with}\qquad
 \sigma(x) = \frac{1}{1 + e^{-x}}
 $$
+
+This step combines the variant score $$V_g^\ast$$ and phenotype score $$P'_g$$ into a single probability-like value using a logistic regression model. 
+The logistic function $$\sigma(x)$$ maps any real value to the range $$0 \le S_g \le 1$$.
+The coefficients $$\beta_0, \beta_1, \beta_2$$ set the relative weight of the two scores.
+
+$$\beta_0$$ is the intercept, $$\beta_1$$ is the weight for the variant score $$V_g^\ast$$, and $$\beta_2$$ is the weight for the phenotype score $$P'_g$$.
+
+The logistic regression uses these three parameters together to balance baseline probability with the contributions of variant and phenotype evidence.
+
+The model was trained once on 10 000 pathogenic and 10 000 benign variants with 10-fold cross-validation. 
+The resulting coefficients are fixed in each release and applied directly to user data. 
+Variants not in the training set are scored in the same way as those that were, so novel variants are fully supported.
 
 ---
 
