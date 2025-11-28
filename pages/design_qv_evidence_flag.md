@@ -8,7 +8,22 @@ nav_order: 5
 
 Last update: 20251123
 
-# Design QV evidence framework
+# Project design qualifying variant evidence standard (QV-ES)
+
+**TLDR**: Health systems, research, and industry cannot exchange genomic results because each pipeline outputs something different; QV-ES solves this with a shared national-scale rule spec and a minimal evidence layer that every pipeline can generate and every institution can verify.
+
+**System name**: QV Evidence Framework  
+**Evidence standard**: QV Evidence Standard (QV-ES)
+
+## Qualifying variant framework and evidence standard (QV-ES)
+
+The QV Evidence Standard (QV-ES) is one pillar of a larger framework. The framework consists of three components: the QV rule specification, the QV registry, and the QV-ES, which defines the minimal verifiable evidence required for interpretation in clinical genetics. QV sets give us a clean way to separate genetic analysis variables from the software that uses them.  
+
+
+The rule specification provides the YAML or JSON format, the registry stores both QV rule sets as versioned objects, and QV-ES supplies the evidence rules that pipelines use to produce outputs suitable for relational or graph databases at national scale, such as PostgreSQL and RDF.
+
+Genome analysis providers supply the variant results for interpretation. To verify and trust their result, the framework uses the reverse logic to measuring how much verifiable evidence invalidates an interpretation. Private companies and public research gain a shared evidence metric while keeping internal methods and IP separate.
+
 ## Introduction
 
 Genomic analysis uses many different tools, yet every pipeline must address the same core questions about sequence validity, provenance, normalisation and the evidence supporting a variant. These checks are independent of how the variant was identified or which algorithm produced it.
@@ -17,8 +32,6 @@ This guideline defines a shared, tool agnostic specification for reporting that 
 
 By separating evidence requirements from implementation, the framework enables interoperability across diverse systems, supports reproducibility and accreditation, and allows the sector to advance without fragmentation.
 
-
-
 ## Conceptual basis
 
 The design builds on the Qualifying Variant (QV) framework by Lawless et al. (2025), which showed that rule definitions can be separated from analysis code and maintained as versioned, portable objects (**Figure 1**). That approach demonstrated that criteria can be written, cited, audited and reused independently of the internal algorithms that apply them. This guideline generalises the same principle to a downstream set of evidence flags required for Mendelian interpretation, extending the portability and transparency of the QV concept to the full evidence layer.
@@ -26,7 +39,7 @@ For the framework and suggested file structure see: Lawless, Dylan, et al. "[App
 [DOI](https://doi.org/10.1101/2025.05.09.25324975) | 
 [PDF](https://www.medrxiv.org/content/10.1101/2025.05.09.25324975v3.full.pdf).
 
-<img src="{{ "pages/design_doc/images/qv_evidence_flag_1.png" | relative_url }}" width="100%">
+<img src="{{ "pages/design_doc/images/qv_evidence_flag_1.png" | relative_url }}" width="101%">
 **Figure 1.** Shared QV configuration registry. Public or private QV sets define the consensus minimal evidence rules in a portable, versioned format. WGS providers, clinical users, and companies all draw from the same QV database, ensuring that evidence checks are reproducible, transparent, and aligned across independent pipelines.
 
 
