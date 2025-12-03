@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Design QV evidence framework
+title: Project design QV-ES
 parent: Design documents
 has_children: false
 nav_order: 5
