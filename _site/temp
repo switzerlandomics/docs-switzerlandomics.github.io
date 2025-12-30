@@ -1,0 +1,870 @@
+.
+├── 404.html
+├── CNAME
+├── CODE_OF_CONDUCT.md
+├── Gemfile
+├── Gemfile.lock
+├── Gemfile.lock.bak
+├── LICENSE
+├── README.md
+├── _config.yml
+├── _includes
+│   ├── acgm_criteria_table.txt
+│   ├── acgm_criteria_table_caveats.txt
+│   ├── components
+│   │   ├── aux_nav.html
+│   │   ├── breadcrumbs.html
+│   │   ├── children_nav.html
+│   │   ├── footer.html
+│   │   ├── header.html
+│   │   ├── mermaid.html
+│   │   ├── search_footer.html
+│   │   ├── search_header.html
+│   │   └── sidebar.html
+│   ├── concept
+│   │   ├── data
+│   │   │   ├── 20240927_example_report_concepts.png
+│   │   │   ├── 240101012345_WGS_NDS_WGS_NDS_ProjectName_date_WNGS00000123_customerQC.html
+│   │   │   ├── Canton_001_NGS000012345_NA_S46_L001_R1_001.fastq_head.text
+│   │   │   ├── Canton_001_NGS000012345_NA_S46_L001_R1_001_sample_seq_assay_log.text
+│   │   │   ├── Canton_001_NGS000012345_NA_S46_L001_fastp.html
+│   │   │   ├── Canton_001_NGS000012345_NA_S46_L001_fastp.json
+│   │   │   ├── SPHN_dataset_release_2024_2_20240502.xlsx
+│   │   │   ├── bwa_10351_101_10453.out.text
+│   │   │   ├── example_variant.Rds
+│   │   │   ├── example_variant.tsv
+│   │   │   └── sequencing\ assay_van_der_Horst2023.txt
+│   │   └── out
+│   │       ├── example_WGS_sequencing_report_deliverable_summary.html
+│   │       ├── example_WGS_sequencing_report_deliverable_summary.tsv
+│   │       ├── example_WGS_sequencing_report_project_summary.html
+│   │       ├── example_WGS_sequencing_report_project_summary.tsv
+│   │       ├── example_WGS_sequencing_report_samples.html
+│   │       ├── example_WGS_sequencing_report_samples.tsv
+│   │       ├── example_complete_set_enhanced.Rds
+│   │       ├── example_complete_set_enhanced.html
+│   │       ├── example_complete_set_enhanced.json
+│   │       ├── example_complete_set_enhanced.tsv
+│   │       ├── example_fq_head.Rds
+│   │       ├── example_fq_head.tsv
+│   │       ├── example_read_log_enhanced.Rds
+│   │       ├── example_read_log_enhanced.tsv
+│   │       ├── example_report.tsv
+│   │       ├── example_report_concepts.Rds
+│   │       ├── example_report_concepts.html
+│   │       ├── example_report_concepts.json
+│   │       ├── example_report_concepts.tsv
+│   │       ├── example_report_concepts_completed.html
+│   │       ├── example_seq_assay_enhanced.Rds
+│   │       ├── example_seq_assay_enhanced.tsv
+│   │       ├── example_subset_concepts.tsv
+│   │       ├── example_variant_enhanced.Rds
+│   │       ├── example_variant_enhanced.tsv
+│   │       ├── plot_semantic_evidence_plot_network.html
+│   │       ├── plot_semantic_evidence_plot_network.pdf
+│   │       ├── plot_semantic_evidence_plot_network.png
+│   │       ├── plot_semantic_evidence_plot_sankey.html
+│   │       ├── plot_semantic_evidence_plot_sankey.pdf
+│   │       └── plot_semantic_evidence_plot_sankey.png
+│   ├── css
+│   │   ├── callouts.scss.liquid
+│   │   ├── custom.scss.liquid
+│   │   └── just-the-docs.scss.liquid
+│   ├── fix_linenos.html
+│   ├── footer_custom.html
+│   ├── head.html
+│   ├── head_custom.html
+│   ├── header_custom.html
+│   ├── icons
+│   │   ├── code_copy.html
+│   │   ├── document.html
+│   │   ├── expand.html
+│   │   ├── external_link.html
+│   │   ├── icons.html
+│   │   ├── link.html
+│   │   ├── menu.html
+│   │   └── search.html
+│   ├── js
+│   │   └── custom.js
+│   ├── lunr
+│   │   ├── custom-data.json
+│   │   └── custom-index.js
+│   ├── mathjax.html
+│   ├── mermaid_config.js
+│   ├── nav.html
+│   ├── nav_footer_custom.html
+│   ├── search_placeholder_custom.html
+│   ├── sorted_pages.html
+│   ├── title.html
+│   └── toc_heading_custom.html
+├── _layouts
+│   ├── about.html
+│   ├── default.html
+│   ├── home.html
+│   ├── mathjax.html
+│   ├── minimal.html
+│   ├── page.html
+│   ├── post.html
+│   └── table_wrappers.html
+├── _sass
+│   ├── base.scss
+│   ├── buttons.scss
+│   ├── code.scss
+│   ├── color_schemes
+│   │   ├── dark.scss
+│   │   ├── legacy_light.scss
+│   │   └── light.scss
+│   ├── content.scss
+│   ├── custom
+│   │   ├── _theme.scss
+│   │   ├── custom.scss
+│   │   └── setup.scss
+│   ├── labels.scss
+│   ├── layout.scss
+│   ├── modules.scss
+│   ├── navigation.scss
+│   ├── print.scss
+│   ├── search.scss
+│   ├── skiptomain.scss
+│   ├── support
+│   │   ├── _functions.scss
+│   │   ├── _variables.scss
+│   │   ├── custom.scss
+│   │   ├── mixins
+│   │   │   ├── _buttons.scss
+│   │   │   ├── _layout.scss
+│   │   │   ├── _typography.scss
+│   │   │   └── mixins.scss
+│   │   └── support.scss
+│   ├── tables.scss
+│   ├── typography.scss
+│   └── utilities
+│       ├── _colors.scss
+│       ├── _layout.scss
+│       ├── _lists.scss
+│       ├── _spacing.scss
+│       ├── _typography.scss
+│       └── utilities.scss
+├── _site
+│   ├── 404.html
+│   ├── CNAME
+│   ├── CODE_OF_CONDUCT.md
+│   ├── LICENSE
+│   ├── README.md
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-384x384.png
+│   ├── apple-touch-icon.png
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── just-the-docs-dark.css
+│   │   │   ├── just-the-docs-dark.css.map
+│   │   │   ├── just-the-docs-default.css
+│   │   │   ├── just-the-docs-default.css.map
+│   │   │   ├── just-the-docs-head-nav.css
+│   │   │   ├── just-the-docs-light.css
+│   │   │   └── just-the-docs-light.css.map
+│   │   ├── images
+│   │   │   ├── Bayes_Placenta_Previa.jpg
+│   │   │   ├── Bayes_ex1_plot-1.png
+│   │   │   ├── Bayes_ex2_plot-1.png
+│   │   │   ├── BioMedIT\ Graphic\ -\ SIB\ 3\ line_with\ title_Large.png
+│   │   │   ├── PCA_biplot_1kg.png
+│   │   │   ├── Phoenix_criteria.png
+│   │   │   ├── Phoenix_decision_tree.png
+│   │   │   ├── Semantic-Interoperability-Framework.png
+│   │   │   ├── acat
+│   │   │   │   ├── acat_fig_1.jpg
+│   │   │   │   ├── acat_fig_2.png
+│   │   │   │   ├── acat_fig_3.png
+│   │   │   │   ├── p_acat.png
+│   │   │   │   ├── p_acat_weight_GTEx_test.png
+│   │   │   │   ├── p_combined.png
+│   │   │   │   ├── p_gtex_gene_median_tpm_scaledweight.png
+│   │   │   │   ├── p_gtex_gene_median_tpm_volcano.png
+│   │   │   │   └── p_hist_qq.png
+│   │   │   ├── altman_bland_analysis_of_methods.png
+│   │   │   ├── altman_bland_repeated_observations.png
+│   │   │   ├── blank-1.png
+│   │   │   ├── chronique_drouin_figure1.jpg
+│   │   │   ├── chronique_drouin_figure2.jpg
+│   │   │   ├── combined-1.png
+│   │   │   ├── concept_ideas_1.png
+│   │   │   ├── concept_ideas_2.png
+│   │   │   ├── concept_ideas_3.png
+│   │   │   ├── concept_ideas_4.png
+│   │   │   ├── favicon_package_v0.16
+│   │   │   │   ├── android-chrome-192x192.png
+│   │   │   │   ├── android-chrome-384x384.png
+│   │   │   │   ├── apple-touch-icon.png
+│   │   │   │   ├── browserconfig.xml
+│   │   │   │   ├── favicon-16x16.png
+│   │   │   │   ├── favicon-32x32.png
+│   │   │   │   ├── favicon.ico
+│   │   │   │   ├── mstile-150x150.png
+│   │   │   │   ├── safari-pinned-tab.svg
+│   │   │   │   └── site.webmanifest
+│   │   │   ├── file_count_plot-1.png
+│   │   │   ├── ivdr_auto_network_graph.png
+│   │   │   ├── logos
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs.png
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs_mint.png
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs_mint_noname\ copy.png
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs_mint_noname.png
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs_pink.png
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs_wide_1.png
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs_wide_1_pink.png
+│   │   │   │   ├── SwissPedHealth_Pipeline_Devs_wide_2.png
+│   │   │   │   ├── logo-mobile.svg
+│   │   │   │   ├── logo_v1.graphml
+│   │   │   │   ├── logo_v1.png
+│   │   │   │   ├── logo_v1.svg
+│   │   │   │   ├── logo_v2.graphml
+│   │   │   │   ├── logo_v2.png
+│   │   │   │   ├── logo_v2.svg
+│   │   │   │   ├── logo_v2_hires.png
+│   │   │   │   ├── logo_v3.graphml
+│   │   │   │   ├── logo_v3.svg
+│   │   │   │   └── logo_x.svg
+│   │   │   ├── mbf_decision_tree_1.png
+│   │   │   ├── mbf_decision_tree_2.png
+│   │   │   ├── mbf_decision_tree_3.png
+│   │   │   ├── mbf_decision_tree_4.png
+│   │   │   ├── mbf_decision_tree_5.png
+│   │   │   ├── multiblock_modol_outputs.png
+│   │   │   ├── multiomic_model_vcurrent.pdf
+│   │   │   ├── multiomic_model_vcurrent.png
+│   │   │   ├── nextstrain_screen.png
+│   │   │   ├── patch1.png
+│   │   │   ├── patch2.png
+│   │   │   ├── patch3.png
+│   │   │   ├── patch4.png
+│   │   │   ├── patch5.png
+│   │   │   ├── pca_biplot-new.png
+│   │   │   ├── pearl_causal_inference_1.png
+│   │   │   ├── pearl_causal_inference_2.png
+│   │   │   ├── pearl_causal_inference_3.png
+│   │   │   ├── pearl_causal_inference_4.png
+│   │   │   ├── pearl_causal_inference_5.png
+│   │   │   ├── pipedev_logo_1.png
+│   │   │   ├── plot-1.png
+│   │   │   ├── plot-2.png
+│   │   │   ├── plot_probabilities-1.png
+│   │   │   ├── plot_semantic_evidence_plot_network.html
+│   │   │   ├── plot_semantic_evidence_plot_network.pdf
+│   │   │   ├── plot_semantic_evidence_plot_network.png
+│   │   │   ├── plot_semantic_evidence_plot_sankey.html
+│   │   │   ├── plot_semantic_evidence_plot_sankey.pdf
+│   │   │   ├── plot_semantic_evidence_plot_sankey.png
+│   │   │   ├── precision_med_unit_management.png
+│   │   │   ├── receiver_operating_characteristic_curve.png
+│   │   │   ├── receiver_operating_characteristic_plots.png
+│   │   │   ├── sepsis_score_logic_sepsis3_f1.png
+│   │   │   ├── sepsis_score_logic_sepsis3_f2.png
+│   │   │   ├── sepsis_score_logic_sepsis3_f3.png
+│   │   │   ├── unnamed-chunk-11-1.png
+│   │   │   ├── unnamed-chunk-12-1.png
+│   │   │   ├── unnamed-chunk-14-1.png
+│   │   │   ├── unnamed-chunk-15-1.png
+│   │   │   ├── unnamed-chunk-16-1.png
+│   │   │   ├── unnamed-chunk-19-1.png
+│   │   │   ├── unnamed-chunk-2-1.png
+│   │   │   ├── unnamed-chunk-23-1.png
+│   │   │   ├── unnamed-chunk-26-1.png
+│   │   │   ├── unnamed-chunk-28-1.png
+│   │   │   ├── unnamed-chunk-3-1.png
+│   │   │   ├── unnamed-chunk-38-1.png
+│   │   │   ├── unnamed-chunk-4-1.png
+│   │   │   ├── unnamed-chunk-43-1.png
+│   │   │   ├── unnamed-chunk-44-1.png
+│   │   │   ├── unnamed-chunk-45-1.png
+│   │   │   ├── unnamed-chunk-47-1.png
+│   │   │   ├── unnamed-chunk-50-1.png
+│   │   │   ├── unnamed-chunk-51-1.png
+│   │   │   ├── unnamed-chunk-85-1.png
+│   │   │   ├── unnamed-chunk-86-1.png
+│   │   │   ├── unnamed-chunk-9-1.png
+│   │   │   ├── wang_pca.png
+│   │   │   └── word-count-plots-1.png
+│   │   └── js
+│   │       ├── just-the-docs.js
+│   │       ├── mathjax-script-type.js
+│   │       ├── search-data.json
+│   │       └── vendor
+│   │           └── lunr.min.js
+│   ├── browserconfig.xml
+│   ├── data
+│   │   └── annotation_datasets
+│   │       ├── data
+│   │       │   ├── datasources.tsv.txt
+│   │       │   ├── datasources_compiled.tsv
+│   │       │   ├── dbNSFP4.2a.readme.txt
+│   │       │   └── list.txt
+│   │       ├── output
+│   │       │   ├── annotation_datasets_category.pdf
+│   │       │   ├── annotation_datasets_category.png
+│   │       │   ├── annotation_datasets_table.html
+│   │       │   └── annotation_datasets_table_files
+│   │       │       ├── core-js-2.5.3
+│   │       │       │   ├── LICENSE
+│   │       │       │   ├── package.json
+│   │       │       │   └── shim.min.js
+│   │       │       ├── htmlwidgets-1.5.4
+│   │       │       │   └── htmlwidgets.js
+│   │       │       ├── react-17.0.0
+│   │       │       │   ├── AUTHORS
+│   │       │       │   ├── LICENSE.txt
+│   │       │       │   ├── react-dom.min.js
+│   │       │       │   └── react.min.js
+│   │       │       ├── reactable-binding-0.2.3
+│   │       │       │   └── reactable.js
+│   │       │       └── reactwidget-1.0.0
+│   │       │           ├── react-tools.js
+│   │       │           └── react-tools.js.map
+│   │       └── src
+│   │           └── annotation_datasets.R
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── favicon.ico
+│   ├── gitlog_2023.txt
+│   ├── gitlog_2024.txt
+│   ├── gitlog_2025.txt
+│   ├── gitlog_generate.sh
+│   ├── index.html
+│   ├── jek.sh
+│   ├── kill_serve.sh
+│   ├── landing_page.md
+│   ├── mstile-150x150.png
+│   ├── pages
+│   │   ├── Phoenix_Sepsis_Score_logic.html
+│   │   ├── Phoenix_Sepsis_Score_logic_files
+│   │   │   └── figure-gfm
+│   │   │       ├── plot-1.png
+│   │   │       └── plot-2.png
+│   │   ├── acat.html
+│   │   ├── acmg_criteria_table_main.html
+│   │   ├── aggregate_multiplex.html
+│   │   ├── annotation_table.html
+│   │   ├── bam2fastq.html
+│   │   ├── bayesian_example1.html
+│   │   ├── bayesian_example2.html
+│   │   ├── bayesian_genetic_carrier.html
+│   │   ├── bayesian_mcmc_samplers.html
+│   │   ├── bayesian_multiparameter_bioassay.html
+│   │   ├── bayesian_multiparameter_models.html
+│   │   ├── benchmark_pipelines.html
+│   │   ├── bevimed.html
+│   │   ├── biomedit.html
+│   │   ├── bookmarks.html
+│   │   ├── bwa.html
+│   │   ├── causal_inference_stats.html
+│   │   ├── causal_inference_whole_game.html
+│   │   ├── causal_inference_whole_game_files
+│   │   │   └── figure-gfm
+│   │   │       ├── fig-ate-density-net-data-1.png
+│   │   │       ├── fig-bootstrap-estimates-net-data-1.png
+│   │   │       ├── fig-love-plot-net-data-1.png
+│   │   │       ├── fig-malaria-risk-density-1.png
+│   │   │       ├── fig-mirror-histogram-net-data-unweighted-1.png
+│   │   │       ├── fig-mirror-histogram-net-data-weighted-1.png
+│   │   │       ├── fig-net-data-confounding-1.png
+│   │   │       ├── fig-net-data-dag-1.png
+│   │   │       ├── fig-net-data-true-dag-1.png
+│   │   │       ├── fig-tip-coef-net-1.png
+│   │   │       └── unnamed-chunk-4-1.png
+│   │   ├── code_documentation.txt
+│   │   ├── data_concepts.html
+│   │   ├── data_stream.html
+│   │   ├── design_PCA_SNV_INDEL_V1.html
+│   │   ├── design_dna_snvindel_v1.html
+│   │   ├── design_dna_snvindel_v1_release.html
+│   │   ├── design_dna_snvindel_v2_release.html
+│   │   ├── design_doc
+│   │   │   ├── images
+│   │   │   │   ├── VEP_consequences.jpg
+│   │   │   │   ├── Variant-filtering-and-annotation-workflow-with-summative-case-and-control-variant.png
+│   │   │   │   ├── example_variant_long_darkplot.png
+│   │   │   │   ├── example_variant_short_darkplot.png
+│   │   │   │   ├── mcl_skat_4_extended_vcurrent.png
+│   │   │   │   ├── mcl_skat_4_vcurrent.png
+│   │   │   │   ├── povysil2019qv.png.webp
+│   │   │   │   ├── qv_evidence_flag_1.png
+│   │   │   │   ├── qv_evidence_flag_2.png
+│   │   │   │   ├── qv_evidence_flag_3.png
+│   │   │   │   ├── qv_pipeline_vcurrent.png
+│   │   │   │   └── variant_annotation_graph.png
+│   │   │   └── temp.txt
+│   │   ├── design_doc.html
+│   │   ├── design_quant_es.html
+│   │   ├── design_qv_evidence_flag.html
+│   │   ├── design_qv_snvindel_v1.html
+│   │   ├── design_statistical_genomics_v1.html
+│   │   ├── dna_annotation.html
+│   │   ├── dna_interpretation.html
+│   │   ├── dna_qc.html
+│   │   ├── docker_singularity.html
+│   │   ├── documentation.sh
+│   │   ├── documentation_log.html
+│   │   ├── exomiser.html
+│   │   ├── exomiser_phenodigm.html
+│   │   ├── fastp.html
+│   │   ├── fastq.html
+│   │   ├── filter_vcf_bcftools.html
+│   │   ├── financial_management.html
+│   │   ├── gatk_1.md
+│   │   ├── gatk_bsqr.html
+│   │   ├── gatk_dbimport.html
+│   │   ├── gatk_duplicates.html
+│   │   ├── gatk_genotypegvcf.html
+│   │   ├── gatk_genotyperefine.html
+│   │   ├── gatk_hc.html
+│   │   ├── gatk_vqsr.html
+│   │   ├── git_note
+│   │   ├── guru.html
+│   │   ├── gwas.html
+│   │   ├── handbook.md
+│   │   ├── hpc.html
+│   │   ├── inf_causal_metab_sem.html
+│   │   ├── journals.html
+│   │   ├── lawlessgenomics_to_docs.sh
+│   │   ├── layout.html
+│   │   ├── leomed.md
+│   │   ├── log_dates.md
+│   │   ├── mathjax.html
+│   │   ├── mbdf_models.html
+│   │   ├── mbdf_supervised.html
+│   │   ├── mbdf_unsupervised.html
+│   │   ├── metadata.html
+│   │   ├── metadata_users.html
+│   │   ├── metrics_bcftoolscounts.html
+│   │   ├── metrics_bcftoolsstats.html
+│   │   ├── metrics_collectwgsmetrics.html
+│   │   ├── multiblock_data_fusion.html
+│   │   ├── my_voice.html
+│   │   ├── panels_disease.html
+│   │   ├── pca_biplot_1kg.html
+│   │   ├── pca_features.html
+│   │   ├── platform_updates.html
+│   │   ├── pre_anno_maf.html
+│   │   ├── pre_annoprocess.html
+│   │   ├── precision_med.html
+│   │   ├── present
+│   │   │   ├── presentations.html
+│   │   │   └── template
+│   │   │       ├── 20230703.tex
+│   │   │       ├── images
+│   │   │       │   ├── SwissPedHealth_Pipeline_Devs.png
+│   │   │       │   ├── SwissPedHealth_Pipeline_Devs_wide_1.png
+│   │   │       │   ├── SwissPedHealth_Pipeline_Devs_wide_2.png
+│   │   │       │   └── swisspedhealth_pipedev_omic_concepts.png
+│   │   │       └── references.bib
+│   │   ├── progress.md
+│   │   ├── progress.pdf
+│   │   ├── progress.sh
+│   │   ├── qv_design.html
+│   │   ├── read_group.html
+│   │   ├── ref.html
+│   │   ├── rl_finte_mdp.html
+│   │   ├── rna_seq.md
+│   │   ├── slurm_manager.html
+│   │   ├── slurm_sbatch.html
+│   │   ├── stats_altman_bland_analysis_of_methods.html
+│   │   ├── stats_altman_bland_ci_from_p.html
+│   │   ├── stats_altman_bland_correlation.html
+│   │   ├── stats_altman_bland_cp.sh
+│   │   ├── stats_altman_bland_odds_ratios.html
+│   │   ├── stats_altman_bland_roc_curve.html
+│   │   ├── stats_altman_bland_sensitivity_specificity.html
+│   │   ├── storage_architecture_plan.html
+│   │   ├── storage_estimates.html
+│   │   ├── storage_use_sync_and_versioning.html
+│   │   ├── style.html
+│   │   ├── style_writing.html
+│   │   ├── sv.html
+│   │   ├── synth_data.html
+│   │   ├── template.tex
+│   │   ├── variables.html
+│   │   ├── variant_concept.html
+│   │   ├── vcf.html
+│   │   ├── vcf_gvcf.html
+│   │   ├── virtual_panels.html
+│   │   ├── vsat.html
+│   │   └── vsat_setID.html
+│   ├── pdf
+│   │   └── buildpdf.sh
+│   ├── safari-pinned-tab.svg
+│   ├── site.webmanifest
+│   └── src
+│       ├── bayesian_demo3_1_4.Rmd
+│       ├── bayesian_demo3_5.Rmd
+│       ├── bayesian_demo3_6.Rmd
+│       ├── bayesian_example1.Rmd
+│       ├── bayesian_example2.Rmd
+│       ├── bayesian_genetic_carrier.Rmd
+│       ├── causal_inference_whole_game.Rmd
+│       ├── causal_inference_whole_game_raw.Rmd
+│       ├── documentation_log.Rmd
+│       ├── file_count.sh
+│       ├── file_counts
+│       │   ├── file_count_log.bak
+│       │   └── file_count_log.md
+│       ├── release_update_list.sh
+│       ├── sepsis_score_logic.bib
+│       ├── sepsis_score_logic_phoenix.Rmd
+│       └── sepsis_score_logic_sepsis3.Rmd
+├── android-chrome-192x192.png
+├── android-chrome-384x384.png
+├── apple-touch-icon.png
+├── assets
+│   ├── css
+│   │   ├── just-the-docs-dark.scss
+│   │   ├── just-the-docs-default.scss
+│   │   └── just-the-docs-light.scss
+│   ├── images
+│   │   ├── Bayes_Placenta_Previa.jpg
+│   │   ├── Bayes_ex1_plot-1.png
+│   │   ├── Bayes_ex2_plot-1.png
+│   │   ├── BioMedIT\ Graphic\ -\ SIB\ 3\ line_with\ title_Large.png
+│   │   ├── PCA_biplot_1kg.png
+│   │   ├── Phoenix_criteria.png
+│   │   ├── Phoenix_decision_tree.png
+│   │   ├── Semantic-Interoperability-Framework.png
+│   │   ├── acat
+│   │   │   ├── acat_fig_1.jpg
+│   │   │   ├── acat_fig_2.png
+│   │   │   ├── acat_fig_3.png
+│   │   │   ├── p_acat.png
+│   │   │   ├── p_acat_weight_GTEx_test.png
+│   │   │   ├── p_combined.png
+│   │   │   ├── p_gtex_gene_median_tpm_scaledweight.png
+│   │   │   ├── p_gtex_gene_median_tpm_volcano.png
+│   │   │   └── p_hist_qq.png
+│   │   ├── altman_bland_analysis_of_methods.png
+│   │   ├── altman_bland_repeated_observations.png
+│   │   ├── blank-1.png
+│   │   ├── chronique_drouin_figure1.jpg
+│   │   ├── chronique_drouin_figure2.jpg
+│   │   ├── combined-1.png
+│   │   ├── concept_ideas_1.png
+│   │   ├── concept_ideas_2.png
+│   │   ├── concept_ideas_3.png
+│   │   ├── concept_ideas_4.png
+│   │   ├── favicon_package_v0.16
+│   │   │   ├── android-chrome-192x192.png
+│   │   │   ├── android-chrome-384x384.png
+│   │   │   ├── apple-touch-icon.png
+│   │   │   ├── browserconfig.xml
+│   │   │   ├── favicon-16x16.png
+│   │   │   ├── favicon-32x32.png
+│   │   │   ├── favicon.ico
+│   │   │   ├── mstile-150x150.png
+│   │   │   ├── safari-pinned-tab.svg
+│   │   │   └── site.webmanifest
+│   │   ├── file_count_plot-1.png
+│   │   ├── ivdr_auto_network_graph.png
+│   │   ├── logos
+│   │   │   ├── SwissPedHealth_Pipeline_Devs.png
+│   │   │   ├── SwissPedHealth_Pipeline_Devs_mint.png
+│   │   │   ├── SwissPedHealth_Pipeline_Devs_mint_noname\ copy.png
+│   │   │   ├── SwissPedHealth_Pipeline_Devs_mint_noname.png
+│   │   │   ├── SwissPedHealth_Pipeline_Devs_pink.png
+│   │   │   ├── SwissPedHealth_Pipeline_Devs_wide_1.png
+│   │   │   ├── SwissPedHealth_Pipeline_Devs_wide_1_pink.png
+│   │   │   ├── SwissPedHealth_Pipeline_Devs_wide_2.png
+│   │   │   ├── logo-mobile.svg
+│   │   │   ├── logo_v1.graphml
+│   │   │   ├── logo_v1.png
+│   │   │   ├── logo_v1.svg
+│   │   │   ├── logo_v2.graphml
+│   │   │   ├── logo_v2.png
+│   │   │   ├── logo_v2.svg
+│   │   │   ├── logo_v2_hires.png
+│   │   │   ├── logo_v3.graphml
+│   │   │   ├── logo_v3.svg
+│   │   │   └── logo_x.svg
+│   │   ├── mbf_decision_tree_1.png
+│   │   ├── mbf_decision_tree_2.png
+│   │   ├── mbf_decision_tree_3.png
+│   │   ├── mbf_decision_tree_4.png
+│   │   ├── mbf_decision_tree_5.png
+│   │   ├── multiblock_modol_outputs.png
+│   │   ├── multiomic_model_vcurrent.pdf
+│   │   ├── multiomic_model_vcurrent.png
+│   │   ├── nextstrain_screen.png
+│   │   ├── patch1.png
+│   │   ├── patch2.png
+│   │   ├── patch3.png
+│   │   ├── patch4.png
+│   │   ├── patch5.png
+│   │   ├── pca_biplot-new.png
+│   │   ├── pearl_causal_inference_1.png
+│   │   ├── pearl_causal_inference_2.png
+│   │   ├── pearl_causal_inference_3.png
+│   │   ├── pearl_causal_inference_4.png
+│   │   ├── pearl_causal_inference_5.png
+│   │   ├── pipedev_logo_1.png
+│   │   ├── plot-1.png
+│   │   ├── plot-2.png
+│   │   ├── plot_probabilities-1.png
+│   │   ├── plot_semantic_evidence_plot_network.html
+│   │   ├── plot_semantic_evidence_plot_network.pdf
+│   │   ├── plot_semantic_evidence_plot_network.png
+│   │   ├── plot_semantic_evidence_plot_sankey.html
+│   │   ├── plot_semantic_evidence_plot_sankey.pdf
+│   │   ├── plot_semantic_evidence_plot_sankey.png
+│   │   ├── precision_med_unit_management.png
+│   │   ├── receiver_operating_characteristic_curve.png
+│   │   ├── receiver_operating_characteristic_plots.png
+│   │   ├── sepsis_score_logic_sepsis3_f1.png
+│   │   ├── sepsis_score_logic_sepsis3_f2.png
+│   │   ├── sepsis_score_logic_sepsis3_f3.png
+│   │   ├── unnamed-chunk-11-1.png
+│   │   ├── unnamed-chunk-12-1.png
+│   │   ├── unnamed-chunk-14-1.png
+│   │   ├── unnamed-chunk-15-1.png
+│   │   ├── unnamed-chunk-16-1.png
+│   │   ├── unnamed-chunk-19-1.png
+│   │   ├── unnamed-chunk-2-1.png
+│   │   ├── unnamed-chunk-23-1.png
+│   │   ├── unnamed-chunk-26-1.png
+│   │   ├── unnamed-chunk-28-1.png
+│   │   ├── unnamed-chunk-3-1.png
+│   │   ├── unnamed-chunk-38-1.png
+│   │   ├── unnamed-chunk-4-1.png
+│   │   ├── unnamed-chunk-43-1.png
+│   │   ├── unnamed-chunk-44-1.png
+│   │   ├── unnamed-chunk-45-1.png
+│   │   ├── unnamed-chunk-47-1.png
+│   │   ├── unnamed-chunk-50-1.png
+│   │   ├── unnamed-chunk-51-1.png
+│   │   ├── unnamed-chunk-85-1.png
+│   │   ├── unnamed-chunk-86-1.png
+│   │   ├── unnamed-chunk-9-1.png
+│   │   ├── wang_pca.png
+│   │   └── word-count-plots-1.png
+│   └── js
+│       ├── just-the-docs.js
+│       ├── mathjax-script-type.js
+│       └── zzzz-search-data.json
+├── browserconfig.xml
+├── data
+│   └── annotation_datasets
+│       ├── data
+│       │   ├── datasources.tsv.txt
+│       │   ├── datasources_compiled.tsv
+│       │   ├── dbNSFP4.2a.readme.txt
+│       │   └── list.txt
+│       ├── output
+│       │   ├── annotation_datasets_category.pdf
+│       │   ├── annotation_datasets_category.png
+│       │   ├── annotation_datasets_table.html
+│       │   └── annotation_datasets_table_files
+│       │       ├── core-js-2.5.3
+│       │       │   ├── LICENSE
+│       │       │   ├── package.json
+│       │       │   └── shim.min.js
+│       │       ├── htmlwidgets-1.5.4
+│       │       │   └── htmlwidgets.js
+│       │       ├── react-17.0.0
+│       │       │   ├── AUTHORS
+│       │       │   ├── LICENSE.txt
+│       │       │   ├── react-dom.min.js
+│       │       │   └── react.min.js
+│       │       ├── reactable-binding-0.2.3
+│       │       │   └── reactable.js
+│       │       └── reactwidget-1.0.0
+│       │           ├── react-tools.js
+│       │           └── react-tools.js.map
+│       └── src
+│           └── annotation_datasets.R
+├── favicon-16x16.png
+├── favicon-32x32.png
+├── favicon.ico
+├── gitlog_2023.txt
+├── gitlog_2024.txt
+├── gitlog_2025.txt
+├── gitlog_generate.sh
+├── index.md
+├── jek.sh
+├── kill_serve.sh
+├── landing_page.md
+├── mstile-150x150.png
+├── pages
+│   ├── Phoenix_Sepsis_Score_logic.md
+│   ├── Phoenix_Sepsis_Score_logic_files
+│   │   └── figure-gfm
+│   │       ├── plot-1.png
+│   │       └── plot-2.png
+│   ├── acat.md
+│   ├── acmg_criteria_table_main.md
+│   ├── aggregate_multiplex.md
+│   ├── annotation_table.md
+│   ├── bam2fastq.md
+│   ├── bayesian_example1.md
+│   ├── bayesian_example2.md
+│   ├── bayesian_genetic_carrier.md
+│   ├── bayesian_mcmc_samplers.md
+│   ├── bayesian_multiparameter_bioassay.md
+│   ├── bayesian_multiparameter_models.md
+│   ├── benchmark_pipelines.md
+│   ├── bevimed.md
+│   ├── biomedit.md
+│   ├── bookmarks.md
+│   ├── bwa.md
+│   ├── causal_inference_stats.md
+│   ├── causal_inference_whole_game.md
+│   ├── causal_inference_whole_game_files
+│   │   └── figure-gfm
+│   │       ├── fig-ate-density-net-data-1.png
+│   │       ├── fig-bootstrap-estimates-net-data-1.png
+│   │       ├── fig-love-plot-net-data-1.png
+│   │       ├── fig-malaria-risk-density-1.png
+│   │       ├── fig-mirror-histogram-net-data-unweighted-1.png
+│   │       ├── fig-mirror-histogram-net-data-weighted-1.png
+│   │       ├── fig-net-data-confounding-1.png
+│   │       ├── fig-net-data-dag-1.png
+│   │       ├── fig-net-data-true-dag-1.png
+│   │       ├── fig-tip-coef-net-1.png
+│   │       └── unnamed-chunk-4-1.png
+│   ├── code_documentation.txt
+│   ├── data_concepts.md
+│   ├── data_stream.md
+│   ├── design_PCA_SNV_INDEL_V1.md
+│   ├── design_dna_snvindel_v1.md
+│   ├── design_dna_snvindel_v1_release.md
+│   ├── design_dna_snvindel_v2_release.md
+│   ├── design_doc
+│   │   ├── images
+│   │   │   ├── VEP_consequences.jpg
+│   │   │   ├── Variant-filtering-and-annotation-workflow-with-summative-case-and-control-variant.png
+│   │   │   ├── example_variant_long_darkplot.png
+│   │   │   ├── example_variant_short_darkplot.png
+│   │   │   ├── mcl_skat_4_extended_vcurrent.png
+│   │   │   ├── mcl_skat_4_vcurrent.png
+│   │   │   ├── povysil2019qv.png.webp
+│   │   │   ├── qv_evidence_flag_1.png
+│   │   │   ├── qv_evidence_flag_2.png
+│   │   │   ├── qv_evidence_flag_3.png
+│   │   │   ├── qv_pipeline_vcurrent.png
+│   │   │   └── variant_annotation_graph.png
+│   │   └── temp.txt
+│   ├── design_doc.md
+│   ├── design_quant_es.md
+│   ├── design_qv_evidence_flag.md
+│   ├── design_qv_snvindel_v1.md
+│   ├── design_statistical_genomics_v1.md
+│   ├── dna_annotation.md
+│   ├── dna_interpretation.md
+│   ├── dna_qc.md
+│   ├── docker_singularity.md
+│   ├── documentation.sh
+│   ├── documentation_log.md
+│   ├── exomiser.md
+│   ├── exomiser_phenodigm.md
+│   ├── fastp.md
+│   ├── fastq.md
+│   ├── filter_vcf_bcftools.md
+│   ├── financial_management.md
+│   ├── gatk_1.md
+│   ├── gatk_bsqr.md
+│   ├── gatk_dbimport.md
+│   ├── gatk_duplicates.md
+│   ├── gatk_genotypegvcf.md
+│   ├── gatk_genotyperefine.md
+│   ├── gatk_hc.md
+│   ├── gatk_vqsr.md
+│   ├── git_note
+│   ├── guru.md
+│   ├── gwas.md
+│   ├── handbook.md
+│   ├── hpc.md
+│   ├── inf_causal_metab_sem.md
+│   ├── journals.md
+│   ├── lawlessgenomics_to_docs.sh
+│   ├── layout.md
+│   ├── leomed.md
+│   ├── log_dates.md
+│   ├── mathjax.md
+│   ├── mbdf_models.md
+│   ├── mbdf_supervised.md
+│   ├── mbdf_unsupervised.md
+│   ├── metadata.md
+│   ├── metadata_users.md
+│   ├── metrics_bcftoolscounts.md
+│   ├── metrics_bcftoolsstats.md
+│   ├── metrics_collectwgsmetrics.md
+│   ├── multiblock_data_fusion.md
+│   ├── my_voice.md
+│   ├── panels_disease.md
+│   ├── pca_biplot_1kg.md
+│   ├── pca_features.md
+│   ├── platform_updates.md
+│   ├── pre_anno_maf.md
+│   ├── pre_annoprocess.md
+│   ├── precision_med.md
+│   ├── present
+│   │   ├── presentations.md
+│   │   └── template
+│   │       ├── 20230703.tex
+│   │       ├── images
+│   │       │   ├── SwissPedHealth_Pipeline_Devs.png
+│   │       │   ├── SwissPedHealth_Pipeline_Devs_wide_1.png
+│   │       │   ├── SwissPedHealth_Pipeline_Devs_wide_2.png
+│   │       │   └── swisspedhealth_pipedev_omic_concepts.png
+│   │       └── references.bib
+│   ├── progress.md
+│   ├── progress.pdf
+│   ├── progress.sh
+│   ├── qv_design.md
+│   ├── read_group.md
+│   ├── ref.md
+│   ├── rl_finte_mdp.md
+│   ├── rna_seq.md
+│   ├── slurm_manager.md
+│   ├── slurm_sbatch.md
+│   ├── stats_altman_bland_analysis_of_methods.md
+│   ├── stats_altman_bland_ci_from_p.md
+│   ├── stats_altman_bland_correlation.md
+│   ├── stats_altman_bland_cp.sh
+│   ├── stats_altman_bland_odds_ratios.md
+│   ├── stats_altman_bland_roc_curve.md
+│   ├── stats_altman_bland_sensitivity_specificity.md
+│   ├── storage_architecture_plan.md
+│   ├── storage_estimates.md
+│   ├── storage_use_sync_and_versioning.md
+│   ├── style.md
+│   ├── style_writing.md
+│   ├── sv.md
+│   ├── synth_data.md
+│   ├── template.tex
+│   ├── variables.md
+│   ├── variant_concept.md
+│   ├── vcf.md
+│   ├── vcf_gvcf.md
+│   ├── virtual_panels.md
+│   ├── vsat.md
+│   └── vsat_setID.md
+├── pdf
+│   └── buildpdf.sh
+├── safari-pinned-tab.svg
+├── site.webmanifest
+├── src
+│   ├── bayesian_demo3_1_4.Rmd
+│   ├── bayesian_demo3_5.Rmd
+│   ├── bayesian_demo3_6.Rmd
+│   ├── bayesian_example1.Rmd
+│   ├── bayesian_example2.Rmd
+│   ├── bayesian_genetic_carrier.Rmd
+│   ├── causal_inference_whole_game.Rmd
+│   ├── causal_inference_whole_game_raw.Rmd
+│   ├── documentation_log.Rmd
+│   ├── file_count.sh
+│   ├── file_counts
+│   │   ├── file_count_log.bak
+│   │   └── file_count_log.md
+│   ├── release_update_list.sh
+│   ├── sepsis_score_logic.bib
+│   ├── sepsis_score_logic_phoenix.Rmd
+│   └── sepsis_score_logic_sepsis3.Rmd
+└── temp
+
+80 directories, 787 files
