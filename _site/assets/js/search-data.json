@@ -2716,32 +2716,32 @@
     "relUrl": "/pages/pedigree_tutorial.html#9-relationships"
   },"388": {
     "doc": "How to build a pedigree chart",
-    "title": "9. Add the case metadata",
+    "title": "10. Add the case metadata",
     "content": "Open Case details and Reviewer and export details: disease or condition, referral indication, reviewer, institution, and date. These populate the case summary and the report header and are part of the clinical record, not decoration. ",
-    "url": "/pages/pedigree_tutorial.html#9-add-the-case-metadata",
+    "url": "/pages/pedigree_tutorial.html#10-add-the-case-metadata",
     
-    "relUrl": "/pages/pedigree_tutorial.html#9-add-the-case-metadata"
+    "relUrl": "/pages/pedigree_tutorial.html#10-add-the-case-metadata"
   },"389": {
     "doc": "How to build a pedigree chart",
-    "title": "10. Clear the preflight warnings",
+    "title": "11. Clear the preflight warnings",
     "content": "The navigator Warnings section and the status pill separate conflicts from review items. Conflicts (for example, a proband marked unaffected, or a compound marker without compatible zygosity) should be resolved. Review items (affected without a phenotype, de novo without recorded parental testing, an incomplete REF/ALT pair) should be checked. Finish the data before finishing the picture. ",
-    "url": "/pages/pedigree_tutorial.html#10-clear-the-preflight-warnings",
+    "url": "/pages/pedigree_tutorial.html#11-clear-the-preflight-warnings",
     
-    "relUrl": "/pages/pedigree_tutorial.html#10-clear-the-preflight-warnings"
+    "relUrl": "/pages/pedigree_tutorial.html#11-clear-the-preflight-warnings"
   },"390": {
     "doc": "How to build a pedigree chart",
-    "title": "11. Lay out and present",
+    "title": "12. Lay out and present",
     "content": "Only now adjust appearance. Choose a layout preset (compact, standard, spacious) and fine-tune generation and sibling spacing. Pick a label preset: minimal shows identifiers only; clinical adds names, ages, and phenotype; clinical-genetic adds variant summaries; technical shows coordinates and HGVS. Keep routing on clinical lines for orthogonal descent. Drag a symbol to pin it, use Auto-layout to release all pins, and press 0 to fit. ",
-    "url": "/pages/pedigree_tutorial.html#11-lay-out-and-present",
+    "url": "/pages/pedigree_tutorial.html#12-lay-out-and-present",
     
-    "relUrl": "/pages/pedigree_tutorial.html#11-lay-out-and-present"
+    "relUrl": "/pages/pedigree_tutorial.html#12-lay-out-and-present"
   },"391": {
     "doc": "How to build a pedigree chart",
-    "title": "12. Export and exchange",
+    "title": "13. Export and exchange",
     "content": "Use Export and choose the output: SVG or high-resolution PNG for a figure, PDF for the print report with figure and tables, or native JSON, FHIR R4, and PLINK FAM/PED for data exchange. JSON preserves the complete project; FAM and PED reduce clinical detail to a single PLINK phenotype and rely on the parental roles stored on each union. Figure 8. The export dialog. One project can be saved as a figure, a report, or a data-exchange file. Exchange runs both ways. Use Import to reload a native JSON project, a FHIR R4 bundle, or a PLINK family; a native JSON or FHIR file exported here re-opens with the full pedigree intact, which makes the format a durable record rather than a one-way render. Figure 9. Importing a previously exported file. Native JSON, FHIR R4, and PLINK families all load through the same Import action. Figure 10. Under the hood, the contents of a FHIR compatible JSON file. ",
-    "url": "/pages/pedigree_tutorial.html#12-export-and-exchange",
+    "url": "/pages/pedigree_tutorial.html#13-export-and-exchange",
     
-    "relUrl": "/pages/pedigree_tutorial.html#12-export-and-exchange"
+    "relUrl": "/pages/pedigree_tutorial.html#13-export-and-exchange"
   },"392": {
     "doc": "How to build a pedigree chart",
     "title": "Keyboard shortcuts",

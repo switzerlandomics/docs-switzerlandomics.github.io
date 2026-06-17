@@ -105,19 +105,19 @@ Infertility and other features may be relationship-specific and therefore appear
 
 *Figure 7. Relationships are managed by selecting an individual then setting the partner.*
 
-## 9. Add the case metadata
+## 10. Add the case metadata
 
 Open **Case details** and **Reviewer and export details**: disease or condition, referral indication, reviewer, institution, and date. These populate the case summary and the report header and are part of the clinical record, not decoration.
 
-## 10. Clear the preflight warnings
+## 11. Clear the preflight warnings
 
 The navigator **Warnings** section and the status pill separate conflicts from review items. Conflicts (for example, a proband marked unaffected, or a compound marker without compatible zygosity) should be resolved. Review items (affected without a phenotype, de novo without recorded parental testing, an incomplete REF/ALT pair) should be checked. Finish the data before finishing the picture.
 
-## 11. Lay out and present
+## 12. Lay out and present
 
 Only now adjust appearance. Choose a **layout preset** (compact, standard, spacious) and fine-tune **generation** and **sibling spacing**. Pick a **label preset**: minimal shows identifiers only; clinical adds names, ages, and phenotype; clinical-genetic adds variant summaries; technical shows coordinates and HGVS. Keep **routing** on clinical lines for orthogonal descent. Drag a symbol to pin it, use **Auto-layout** to release all pins, and press **0** to fit.
 
-## 12. Export and exchange
+## 13. Export and exchange
 
 Use **Export** and choose the output: SVG or high-resolution PNG for a figure, PDF for the print report with figure and tables, or native JSON, FHIR R4, and PLINK FAM/PED for data exchange. JSON preserves the complete project; FAM and PED reduce clinical detail to a single PLINK phenotype and rely on the parental roles stored on each union.
 
