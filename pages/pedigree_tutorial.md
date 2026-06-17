@@ -12,7 +12,7 @@ category: pedigree
 
 The pedigree builder turns a family history into a standardised clinical chart by recording people and the relationships between them. You add one individual, then grow the family outward from whoever is selected; the tool assigns generations, positions, and pedigree identifiers automatically and renders the symbols. Clinical status, genetic findings, and reporting detail are layered onto each person afterwards.
 
-This page is the build workflow, in order. It assumes the notation itself is defined elsewhere; for symbol meanings see the [pedigree standards reference](/technologies/pedigree/standards/).
+This page is the build workflow, in order. It assumes the notation itself is defined elsewhere; for symbol meanings see the [pedigree standards reference](https://switzerlandomics.ch/technologies/pedigree/standards/).
 
 ## How the builder thinks
 
@@ -96,6 +96,15 @@ For **twins**, select one twin and open the Twin section to set monozygotic, diz
 
 Use the symbol that matches gender identity, and record sex assigned at birth as an annotation (AFAB, AMAB, UAAB) in the inspector. The annotation appears under the symbol with the clinical, clinical-genetic, or technical label presets. Do not attempt nested square-and-circle symbols; the builder does not use them.
 
+## 9. Relationships
+
+Relationships are managed by selecting an individual then setting the partner or offspring details from the menu. 
+Infertility and other features may be relationship-specific and therefore appear in this section.
+
+<img src="{{ "assets/images/pedigree_tutorial/pedigree_tutorial_7.png" | relative_url }}" width="80%">
+
+*Figure 7. Relationships are managed by selecting an individual then setting the partner.*
+
 ## 9. Add the case metadata
 
 Open **Case details** and **Reviewer and export details**: disease or condition, referral indication, reviewer, institution, and date. These populate the case summary and the report header and are part of the clinical record, not decoration.
@@ -112,19 +121,19 @@ Only now adjust appearance. Choose a **layout preset** (compact, standard, spaci
 
 Use **Export** and choose the output: SVG or high-resolution PNG for a figure, PDF for the print report with figure and tables, or native JSON, FHIR R4, and PLINK FAM/PED for data exchange. JSON preserves the complete project; FAM and PED reduce clinical detail to a single PLINK phenotype and rely on the parental roles stored on each union.
 
-<img src="{{ "assets/images/pedigree_tutorial/pedigree_tutorial_7.png" | relative_url }}" width="80%">
+<img src="{{ "assets/images/pedigree_tutorial/pedigree_tutorial_8.png" | relative_url }}" width="80%">
 
-*Figure 7. The export dialog. One project can be saved as a figure, a report, or a data-exchange file.*
+*Figure 8. The export dialog. One project can be saved as a figure, a report, or a data-exchange file.*
 
 Exchange runs both ways. Use **Import** to reload a native JSON project, a FHIR R4 bundle, or a PLINK family; a native JSON or FHIR file exported here re-opens with the full pedigree intact, which makes the format a durable record rather than a one-way render.
 
-<img src="{{ "assets/images/pedigree_tutorial/pedigree_tutorial_8.png" | relative_url }}" width="80%">
-
-*Figure 8. Importing a previously exported file. Native JSON, FHIR R4, and PLINK families all load through the same Import action.*
-
 <img src="{{ "assets/images/pedigree_tutorial/pedigree_tutorial_9.png" | relative_url }}" width="80%">
 
-*Figure 9. Under the hood, the contents of a FHIR compatible JSON file.*
+*Figure 9. Importing a previously exported file. Native JSON, FHIR R4, and PLINK families all load through the same Import action.*
+
+<img src="{{ "assets/images/pedigree_tutorial/pedigree_tutorial_10.png" | relative_url }}" width="80%">
+
+*Figure 10. Under the hood, the contents of a FHIR compatible JSON file.*
 
 ## Keyboard shortcuts
 
@@ -151,8 +160,7 @@ The builder implements the core symbol set and the relationship types above. Pre
 
 ## Related pages
 
-- [Standardised pedigree notation](/technologies/pedigree/standards/)
-- [How genetic inheritance works](/learn/how-genetic-inheritance-works/)
+- [Standardised pedigree notation](https://switzerlandomics.ch/technologies/pedigree/standards/)
 
 ## Reference
 
